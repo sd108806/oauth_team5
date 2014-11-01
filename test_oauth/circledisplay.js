@@ -16,7 +16,7 @@ document.write("obj_changesets.changesets[0].files.length " +obj_changesets.chan
 
 
 
-var unit=new Object();
+
 var dataset=new Array();
 var k=0;
 
@@ -24,6 +24,7 @@ for (var i=0;i <obj_changesets.changesets.length; i++)
 {
 for ( var j=0; j< obj_changesets.changesets[i].files.length; j++)
 {
+var unit=new Object();
 unit.cx=50+20*i;
 unit.cy=50+20*j;
 
