@@ -27,7 +27,7 @@ var k2=0;
 for (var i=0;i <obj_changesets.changesets.length; i++)
 {
 var unit2=new Object();
-unit2.cx=20+35*i;
+unit2.cx=35+35*i;
 unit2.cy=20;
 unit2.color='purple';
 dataset2[k2]=unit2;
