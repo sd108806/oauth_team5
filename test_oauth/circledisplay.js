@@ -46,7 +46,7 @@ unit.color='blue';
 if(obj_changesets.changesets[i].files[j].type=='removed'  )
 unit.color='green';
 
-unit.file=obj_changesets.changesets[i].files[j].file;
+unit.files=obj_changesets.changesets[i].files[j].file;
 
 dataset[k]=unit;
 k++;
@@ -84,7 +84,7 @@ document.write("dataset[1].cy "+dataset[1].cy);
                .style("fill", function(d) { return d.color; })
                 .on("click", function(d) {
   
-alert(d.file[0]+"<br/>"+ d.file[1]);});
+alert(d.files.type+"<br/>"+ d.files.file);});
 				
 				
 				
