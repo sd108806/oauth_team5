@@ -21,7 +21,7 @@ var k=0;
 
 for (var i=0;i <obj_changesets.changesets.length; i++)
 {
-for ( var j=0; j< (obj_changesets.changesets[i].files).length; j++)
+for ( var j=0; j< obj_changesets.changesets[i].files.length; j++)
 {
 unit.cx=50+20*i;
 unit.cy=50+20*j;
