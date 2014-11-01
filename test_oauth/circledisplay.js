@@ -82,7 +82,14 @@ document.write("dataset[1].cy "+dataset[1].cy);
                })
                	.attr("r", 15)		   
                .style("fill", function(d) { return d.color; });
+                .on("click", function(d) {
   
+alert(d.file[0]+"<br/>"+ d.file[1]);});
+				
+				
+				
+				
+				
           	
  svg.selectAll("rect")
 		 .data(dataset2)  
