@@ -12,7 +12,7 @@ window.location.href="index.html"  ;
 
 
 document.write("obj_changesets.changesets.length " + obj_changesets.changesets.length);
-document.write("obj_changesets.changesets[i].files.length " +obj_changesets.changesets[i].files.length );
+document.write("obj_changesets.changesets[0].files.length " +obj_changesets.changesets[0].files.length );
 
 
 
