@@ -20,16 +20,16 @@ var margin = {top: 20, right: 20, bottom: 30, left: 40},
 
 
 
-var unit;
-var dataset;
+var unit=new Object();
+var dataset=new Array();
 var k=0;
 
 for (var i=0;i <obj_changesets.changesets.length; i++)
 {
 for ( var j=0; j< (obj_changesets.changesets[i].files).length; j++)
 {
-unit.cx=20+20*i;
-unit.cy=20+20*j;
+unit.cx=30+30*i;
+unit.cy=30+30*j;
 
 if(obj_changesets.changesets[i].files[j].type=='added'  )
 unit.color='red';
@@ -65,8 +65,8 @@ k++;
                .attr("cy", function(d) {  
                     return d.cy;  
                })
-               	.attr("r", 3.5)		   
-               .style("fill", function(d) { return color(d.color); });
+               	.attr("r", 17)		   
+               .style("fill", function(d) { return d.color; });
   
           	
 
