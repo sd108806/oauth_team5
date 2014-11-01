@@ -61,7 +61,7 @@ k++;
                .attr("cy", function(d) {  
                     return d.cy;  
                })
-               	.attr("r", 12)		   
+               	.attr("r", 9)		   
                .style("fill", function(d) { return d.color; });
   
           	
