@@ -30,6 +30,13 @@ var unit2=new Object();
 unit2.cx=35+35*i;
 unit2.cy=20;
 unit2.color='purple';
+
+unit2.node=obj_changesets.changesets[i].node;
+unit2.author=obj_changesets.changesets[i].author;
+unit2.timestamp=obj_changesets.changesets[i].timestamp;
+unit2.branch=obj_changesets.changesets[i].branch;
+unit2.message=obj_changesets.changesets[i].message;
+
 dataset2[k2]=unit2;
 k2++;
 
@@ -104,7 +111,16 @@ alert("type "+d.files.type+"\n"+ "file "+d.files.file);});
                })  
         .attr("width", 30)
         .attr("height", 30)
-			.style("fill", function(d) { return d.color; });
+			.style("fill", function(d) { return d.color; })
+			.on("click", function(d) {
+  
+alert("node "+d.node+"\n"
++ "author "+d.author+"\n"
++ "timestamp "+d.timestamp+"\n"
++ "branch "+d.branch+"\n"
++ "message "+d.message+"\n"
+);});
+			
 
 
 
