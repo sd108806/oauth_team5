@@ -11,7 +11,8 @@ window.location.href="index.html"  ;
 }
 
 
-
+document.write("obj_changesets.changesets.length " + obj_changesets.changesets.length);
+document.write("obj_changesets.changesets[i].files.length " +obj_changesets.changesets[i].files.length );
 
 
 
