@@ -1,7 +1,7 @@
 
 function display(obj_changesets,sta_rgb_res,total_rgb)
 {
-
+/*
 document.write("<input type='button' name='aa' id='btn1' value='home' />");
 document.getElementById("btn1").onclick=function(){
 //alert("这里是单击事件");
@@ -9,7 +9,7 @@ document.getElementById("btn1").onclick=function(){
 window.location.href="index.html"  ;
 //history.go(-1);
 }
-
+*/
 
 
 
