@@ -41,6 +41,9 @@ k++;
 }
 }
 
+document.write("dataset.length "+dataset.length);
+
+
 //Width and height  
             var  w  =  1500 ;  
             var  h  =  1500 ;  
