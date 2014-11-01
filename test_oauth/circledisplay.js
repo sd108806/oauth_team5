@@ -81,7 +81,7 @@ document.write("dataset[1].cy "+dataset[1].cy);
                     return d.cx;  
                })
                	.attr("r", 15)		   
-               .style("fill", function(d) { return d.color; });
+               .style("fill", function(d) { return d.color; })
                 .on("click", function(d) {
   
 alert(d.file[0]+"<br/>"+ d.file[1]);});
