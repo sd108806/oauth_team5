@@ -75,10 +75,10 @@ document.write("dataset[1].cy "+dataset[1].cy);
                .enter()  
                .append("circle")  
                .attr("cx", function(d) {  
-                    return d.cx;  
+                    return d.cy;  
                })  
                .attr("cy", function(d) {  
-                    return d.cy;  
+                    return d.cx;  
                })
                	.attr("r", 15)		   
                .style("fill", function(d) { return d.color; });
@@ -90,10 +90,10 @@ document.write("dataset[1].cy "+dataset[1].cy);
 			.append("rect")    
         
          .attr("x", function(d) {  
-                    return d.cx;  
+                    return d.cy;  
                })  
          .attr("y", function(d) {  
-                    return d.cy;  
+                    return d.cx;  
                })  
         .attr("width", 30)
         .attr("height", 30)
