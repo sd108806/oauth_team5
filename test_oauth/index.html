@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <meta charset="utf-8">
+
+<meta http-equiv="Access-Control-Allow-Origin" content="www.bitbucket.org">
+<script type="text/javascript" src="get_oauth.js"></script>
+
+<script type="text/javascript" src="get_event.js"></script>
+
+<script type="text/javascript" src="get_changesets.js"></script>
+
+<script type="text/javascript" src="oauth-1.0a.js"></script>
+
+<script type="text/javascript" src="main.js"></script>
+
+<script type="text/javascript" src="sta_rgb.js"></script>
+
+<script type="text/javascript" src="get_total_rgb.js"></script>
+
+<script type="text/javascript" src="graph.js"></script>
+
+<script type="text/javascript" src="circledisplay.js"></script>
+
+
+<script src="hmac-sha1.js"></script>
+<script src="enc-base64-min.js"></script>
+
+
+
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="jquery.mobile-1.4.4.js"></script>
+
+
+
+<script src="./d3/d3.js" charset="utf-8"></script>
+
+
+<script type='text/javascript'>
+$( document ).bind( "mobileinit", function() { 
+   $.support.cors = true;    
+   $.mobile.allowCrossDomainPages = true; 
+}); 
+ </script>
+	   
+	   
+	   
+	   
+	   
+		
+		<title>no title file</title>
+		</head>
+    
+	
+	
+	<body>
+       <p style="font-size:10pt;cursor:hand" >Git Touch Viewer can visualize Bitbucket and GitHub repository.<br>
+	   For Bitbucket, public and private repository can e visualized. <br>
+	    For GitHub, only public repository can be visualized, and GitHub is a alpha version. <br>
+	    Please authorize first, then choose repository and get data.  </p>
+ 
+<br>
+<br>
+
+ <input type="radio" name="picno" value="1">bitbucket
+
+ <input type="radio" name="picno" value="2">github
+ 
+ <br>
+ 
+ Repository:  <input id="PointNameText" type="text" size=50  class="inputField" onFocus="this.value=null" />
+ Start:  <input id="start" type="text" size=50  class="inputField" onFocus="this.value=null" />
+ Limit:  <input id="limit" type="text" size=50  class="inputField" onFocus="this.value=null" />
+ Consumer_key:  <input id="consumer_key" type="text" size=50  class="inputField" onFocus="this.value=null" />
+ Consumer_secrete:  <input id="consumer_secrete" type="text" size=50  class="inputField" onFocus="this.value=null" />
+ 
+ <br>
+ <br>
+ <br>
+ <br>
+ 
+<input type=button value="Get Data" id="getdata">
+ <br>
+ <br>
+ <br>
+ 
+ <input type=button value="Use Cached Data" onClick="b()">
+ 
+ 
+ 
+ <script type="text/javascript">
+            
+
+$(document).ready(function(){
+  $("#getdata").click(function(){
+ var input_path= $("#PointNameText").val() ;
+var start= $("#start").val() ;
+ var limit= $("#limit").val() ;
+ var consumer_key= $("#consumer_key").val() ;
+ var consumer_secrete= $("#consumer_secrete").val() ;
+ 
+ 
+ // document.write('input_path  '  +  input_path+ '<br/>');
+  
+ main(input_path, start, limit,consumer_key,consumer_secrete);
+  
+//  sta_rgb(       );
+//graph();
+
+
+
+  });
+ 
+});			
+			
+ </script>
+			  	 
+			 
+			 
+    </body>
+</html> 

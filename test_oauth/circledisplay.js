@@ -1,0 +1,76 @@
+
+function display(obj_changesets,sta_rgb_res,total_rgb)
+{
+
+document.write("<input type='button' name='aa' id='btn1' value='home' />");
+document.getElementById("btn1").onclick=function(){
+//alert("这里是单击事件");
+
+window.location.href="index.html"  ;
+//history.go(-1);
+}
+
+
+var margin = {top: 20, right: 20, bottom: 30, left: 40},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+
+
+
+
+
+var unit;
+var dataset;
+var k=0;
+
+for (var i=0;i <obj_changesets.changesets.length; i++)
+{
+for ( var j=0; j< (obj_changesets.changesets[i].files).length; j++)
+{
+unit.cx=20+20*i;
+unit.cy=20+20*j;
+
+if(obj_changesets.changesets[i].files[j].type=='added'  )
+unit.color='red';
+if(obj_changesets.changesets[i].files[j].type=='modified'  )
+unit.color='blue';
+if(obj_changesets.changesets[i].files[j].type=='removed'  )
+unit.color='green';
+
+unit.file=obj_changesets.changesets[i].files[j].file;
+
+dataset[k]=unit;
+k++;
+}
+}
+
+//Width and height  
+            var  w  =  500 ;  
+            var  h  =  100 ;  
+			
+		    //Create SVG element  
+            var  svg  =  d3 .select("body")  
+                        .append("svg")  
+                        .attr("width", w)  
+                        .attr("height", h);  
+  
+            svg.selectAll("circle")  
+               .data(dataset)  
+               .enter()  
+               .append("circle")  
+               .attr("cx", function(d) {  
+                    return d.cx;  
+               })  
+               .attr("cy", function(d) {  
+                    return d.cy;  
+               })
+               	.attr("r", 3.5)		   
+               .style("fill", function(d) { return color(d.color); });
+  
+          	
+
+
+
+
+}
