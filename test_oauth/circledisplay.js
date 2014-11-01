@@ -10,10 +10,10 @@ window.location.href="index.html"  ;
 //history.go(-1);
 }
 
-
+/*
 document.write("obj_changesets.changesets.length " + obj_changesets.changesets.length);
 document.write("obj_changesets.changesets[0].files.length " +obj_changesets.changesets[0].files.length );
-
+*/
 
 
 
@@ -25,8 +25,8 @@ for (var i=0;i <obj_changesets.changesets.length; i++)
 for ( var j=0; j< obj_changesets.changesets[i].files.length; j++)
 {
 var unit=new Object();
-unit.cx=50+20*i;
-unit.cy=50+20*j;
+unit.cx=20+35*i;
+unit.cy=20+35*j;
 
 if(obj_changesets.changesets[i].files[j].type=='added'  )
 unit.color='red';
@@ -41,17 +41,17 @@ dataset[k]=unit;
 k++;
 }
 }
-
+/*
 document.write("dataset.length "+dataset.length);
 document.write("dataset[0].cx "+dataset[0].cx);
 document.write("dataset[0].cy "+dataset[0].cy);
 document.write("dataset[1].cx "+dataset[1].cx);
 document.write("dataset[1].cy "+dataset[1].cy);
-
+*/
 
 //Width and height  
-            var  w  =  1200 ;  
-            var  h  =  1000 ;  
+            var  w  =  1500 ;  
+            var  h  =  1500 ;  
 			
 		    //Create SVG element  
             var  svg  =  d3 .select("body")  
@@ -69,7 +69,7 @@ document.write("dataset[1].cy "+dataset[1].cy);
                .attr("cy", function(d) {  
                     return d.cy;  
                })
-               	.attr("r", 9)		   
+               	.attr("r", 15)		   
                .style("fill", function(d) { return d.color; });
   
           	
