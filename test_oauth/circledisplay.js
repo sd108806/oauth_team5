@@ -42,11 +42,15 @@ k++;
 }
 
 document.write("dataset.length "+dataset.length);
+document.write("dataset[0].cx "+dataset[0].cx);
+document.write("dataset[0].cy "+dataset[0].cy);
+document.write("dataset[1].cx "+dataset[1].cx);
+document.write("dataset[1].cy "+dataset[1].cy);
 
 
 //Width and height  
-            var  w  =  1500 ;  
-            var  h  =  1500 ;  
+            var  w  =  1200 ;  
+            var  h  =  1000 ;  
 			
 		    //Create SVG element  
             var  svg  =  d3 .select("body")  
