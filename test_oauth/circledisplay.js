@@ -1,7 +1,7 @@
 
 function display(obj_changesets,sta_rgb_res,total_rgb)
 {
-/*
+
 document.write("<input type='button' name='aa' id='btn1' value='home' />");
 document.getElementById("btn1").onclick=function(){
 //alert("这里是单击事件");
@@ -9,7 +9,7 @@ document.getElementById("btn1").onclick=function(){
 window.location.href="index.html"  ;
 //history.go(-1);
 }
-*/
+
 
 
 
@@ -23,8 +23,8 @@ for (var i=0;i <obj_changesets.changesets.length; i++)
 {
 for ( var j=0; j< (obj_changesets.changesets[i].files).length; j++)
 {
-unit.cx=20+20*i;
-unit.cy=20+20*j;
+unit.cx=50+20*i;
+unit.cy=50+20*j;
 
 if(obj_changesets.changesets[i].files[j].type=='added'  )
 unit.color='red';
