@@ -46,7 +46,7 @@ unit.color='blue';
 if(obj_changesets.changesets[i].files[j].type=='removed'  )
 unit.color='green';
 
-unit.files=obj_changesets.changesets[i].files[j].file;
+unit.files=obj_changesets.changesets[i].files[j];
 
 dataset[k]=unit;
 k++;
