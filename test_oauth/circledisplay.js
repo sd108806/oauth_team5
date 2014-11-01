@@ -20,13 +20,24 @@ document.write("obj_changesets.changesets[0].files.length " +obj_changesets.chan
 var dataset=new Array();
 var k=0;
 
+var dataset2=new Array();
+var k2=0;
+
+
 for (var i=0;i <obj_changesets.changesets.length; i++)
 {
+var unit2=new Object();
+unit2.cx=50+35*i;
+unit2.cy=20;
+unit2.color='purple';
+dataset2[k2]=unit2;
+k2++;
+
 for ( var j=0; j< obj_changesets.changesets[i].files.length; j++)
 {
 var unit=new Object();
-unit.cx=20+35*i;
-unit.cy=20+35*j;
+unit.cx=50+35*i;
+unit.cy=50+35*j;
 
 if(obj_changesets.changesets[i].files[j].type=='added'  )
 unit.color='red';
@@ -73,7 +84,20 @@ document.write("dataset[1].cy "+dataset[1].cy);
                .style("fill", function(d) { return d.color; });
   
           	
-
+ svg.selectAll("rect")
+		 .data(dataset2)  
+               .enter() 
+			.append("rect")    
+        
+         .attr("x", function(d) {  
+                    return d.cx;  
+               })  
+         .attr("y", function(d) {  
+                    return d.cy;  
+               })  
+        .attr("width", 30)
+        .attr("height", 20)
+			.style("fill", function(d) { return d.color; });
 
 
 
