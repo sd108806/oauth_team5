@@ -127,7 +127,7 @@ svg.append("text")
 	
 	
 	
-$("text").animate({opacity:0},7000);
+$("text").animate({opacity:0},10000);
 
 
 });
@@ -216,15 +216,15 @@ svg.append("text")
 .text("author "+d.author)
 	.append('svg:tspan')
   .attr('x', d.cy)
-  .attr('dy',40)
+  .attr('dy',20)
 .text("timestamp "+d.timestamp)
 .append('svg:tspan')
   .attr('x', d.cy)
-  .attr('dy',60)
+  .attr('dy',20)
 .text("branch "+d.branch)
 .append('svg:tspan')
   .attr('x', d.cy)
-  .attr('dy',80)
+  .attr('dy',20)
 .text("message "+d.message);
 	
 	
@@ -233,7 +233,7 @@ svg.append("text")
 	
 	
 	
-	$("text").animate({opacity:0},7000);
+	$("text").animate({opacity:0},10000);
 	
 });
 			
