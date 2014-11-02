@@ -92,6 +92,7 @@ document.write("dataset[1].cy "+dataset[1].cy);
                 .on("click", function(d) {
   
 //alert("type "+d.files.type+"\n"+ "file "+d.files.file);
+/*
 svg.append("text")
 	.attr("x", d.cy)             
 	.attr("y", d.cx+20)    
@@ -107,6 +108,24 @@ svg.append("text")
 	 .duration(3000)
 	.style("fill", d.color)         
     .text("file "+d.files.file);	
+*/
+	
+	svg.append("svg:text")
+	   .attr("transform","rotate(90  d.cy,d.cx)")
+	.style("fill", d.color) 
+	.append('svg:tspan')
+     .attr("x", d.cy)             
+	.attr("y", d.cx)
+    .text("type "+d.files.type)
+	.append('svg:tspan')
+  .attr('x', d.cy)
+  .attr('dy',20)
+.text("file "+d.files.file);
+	
+	
+	
+	
+	
 	
 $("text").animate({opacity:0},7000);
 
@@ -141,6 +160,8 @@ alert("node "+d.node+"\n"
 + "message "+d.message+"\n"
 );
 */
+
+/*
 svg.append("text")
 	.attr("x", d.cy)             
 	.attr("y", d.cx+20)    
@@ -180,8 +201,39 @@ svg.append("text")
 	 .duration(3000)
 	.style("fill", d.color)         
     .text("message "+d.message);	
+*/
 
-$("text").animate({opacity:0},7000);
+	svg.append("svg:text")
+	   .attr("transform","rotate(90  d.cy,d.cx)")
+	.style("fill", d.color) 
+	.append('svg:tspan')
+     .attr("x", d.cy)             
+	.attr("y", d.cx)
+    .text("node "+d.node)
+	.append('svg:tspan')
+  .attr('x', d.cy)
+  .attr('dy',20)
+.text("author "+d.author)
+	.append('svg:tspan')
+  .attr('x', d.cy)
+  .attr('dy',40)
+.text("timestamp "+d.timestamp)
+.append('svg:tspan')
+  .attr('x', d.cy)
+  .attr('dy',60)
+.text("branch "+d.branch)
+.append('svg:tspan')
+  .attr('x', d.cy)
+  .attr('dy',80)
+.text("message "+d.message);
+	
+	
+	
+	
+	
+	
+	
+	$("text").animate({opacity:0},7000);
 	
 });
 			
