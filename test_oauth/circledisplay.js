@@ -57,7 +57,7 @@ unit.color='green';
 
 unit.files=obj_changesets.changesets[i].files[j];
 
-unit.id=obj_changesets.changesets[i]+"_cir"
+unit.id=obj_changesets.changesets[i].node+"_cir"
 
 dataset[k]=unit;
 k++;
