@@ -91,7 +91,27 @@ document.write("dataset[1].cy "+dataset[1].cy);
                .style("fill", function(d) { return d.color; })
                 .on("click", function(d) {
   
-alert("type "+d.files.type+"\n"+ "file "+d.files.file);});
+//alert("type "+d.files.type+"\n"+ "file "+d.files.file);
+svg.append("text")
+	.attr("x", d.cy)             
+	.attr("y", d.cx+20)    
+	.transition()
+	 .duration(3000)
+	.style("fill", d.color)         
+    .text("type "+d.files.type);
+
+	svg.append("text")
+	.attr("x", d.cy)             
+	.attr("y", d.cx+20+20)    
+	.transition()
+	 .duration(3000)
+	.style("fill", d.color)         
+    .text("file "+d.files.file);	
+	
+$("text").animate({opacity:0},7000);
+
+
+});
 				
 				
 				
@@ -113,13 +133,57 @@ alert("type "+d.files.type+"\n"+ "file "+d.files.file);});
         .attr("height", 30)
 			.style("fill", function(d) { return d.color; })
 			.on("click", function(d) {
-  
+  /*
 alert("node "+d.node+"\n"
 + "author "+d.author+"\n"
 + "timestamp "+d.timestamp+"\n"
 + "branch "+d.branch+"\n"
 + "message "+d.message+"\n"
-);});
+);
+*/
+svg.append("text")
+	.attr("x", d.cy)             
+	.attr("y", d.cx+20)    
+	.transition()
+	 .duration(3000)
+	.style("fill", d.color)         
+    .text("node "+d.node);
+
+svg.append("text")
+	.attr("x", d.cy)             
+	.attr("y", d.cx+40)    
+	.transition()
+	 .duration(3000)
+	.style("fill", d.color)         
+    .text("author "+d.author);
+	
+svg.append("text")
+	.attr("x", d.cy)             
+	.attr("y", d.cx+60)    
+	.transition()
+	 .duration(3000)
+	.style("fill", d.color)         
+    .text("timestamp "+d.timestamp);	
+	
+svg.append("text")
+	.attr("x", d.cy)             
+	.attr("y", d.cx+80)    
+	.transition()
+	 .duration(3000)
+	.style("fill", d.color)         
+    .text("branch "+d.branch);
+	
+svg.append("text")
+	.attr("x", d.cy)             
+	.attr("y", d.cx+100)    
+	.transition()
+	 .duration(3000)
+	.style("fill", d.color)         
+    .text("message "+d.message);	
+
+$("text").animate({opacity:0},7000);
+	
+});
 			
 
 
