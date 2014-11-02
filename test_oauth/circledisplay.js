@@ -135,7 +135,7 @@ $("text").animate({opacity:0},6000);
         .attr("width", 30)
         .attr("height", 30)
 			.style("fill", function(d) { return d.color; })
-			.on("click", function(d) {
+			.on("mouseover", function(d) {
   /*
 alert("node "+d.node+"\n"
 + "author "+d.author+"\n"
