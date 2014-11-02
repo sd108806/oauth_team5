@@ -89,7 +89,7 @@ document.write("dataset[1].cy "+dataset[1].cy);
                })
                	.attr("r", 15)		   
                .style("fill", function(d) { return d.color; })
-                .on("click", function(d) {
+                .on("mouseover", function(d) {
   
 //alert("type "+d.files.type+"\n"+ "file "+d.files.file);
 
@@ -98,8 +98,8 @@ document.write("dataset[1].cy "+dataset[1].cy);
 	   .style("fill", d.color)
 	   .style("writing-mode","tb")
 	.append('svg:tspan')
-     .attr("x", d.cy+20)             
-	.attr("y", d.cx+20)
+     .attr("x", d.cy+30)             
+	.attr("y", d.cx+30)
     .text("type "+d.files.type)
 	.append('svg:tspan')
   .attr('dx', 20)
