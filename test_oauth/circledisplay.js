@@ -89,7 +89,7 @@ document.write("dataset[1].cy "+dataset[1].cy);
                })
                	.attr("r", 15)		   
                .style("fill", function(d) { return d.color; })
-                .on("mouseover", function(d) {
+                .on("click", function(d) {
   
 //alert("type "+d.files.type+"\n"+ "file "+d.files.file);
 
@@ -98,14 +98,15 @@ document.write("dataset[1].cy "+dataset[1].cy);
 	   .style("fill", d.color)
 	   .style("writing-mode","tb")
 	.append('svg:tspan')
-     .attr("x", d.cy+30)             
-	.attr("y", d.cx+30)
+     .attr("x", d.cy+25)             
+	.attr("y", d.cx+25)
     .text("type "+d.files.type)
 	.append('svg:tspan')
   .attr('dx', 20)
-  .attr('y',d.cx+30)
+  .attr('y',d.cx+25)
 .text("file "+d.files.file);
 	
+		$("text").animate({opacity:0},6000);
 	
 	setTimeout(function(){ $("text").remove();}, 7000);
 	
@@ -135,7 +136,7 @@ document.write("dataset[1].cy "+dataset[1].cy);
         .attr("width", 30)
         .attr("height", 30)
 			.style("fill", function(d) { return d.color; })
-			.on("mouseover", function(d) {
+			.on("click", function(d) {
   /*
 alert("node "+d.node+"\n"
 + "author "+d.author+"\n"
@@ -169,13 +170,13 @@ alert("node "+d.node+"\n"
   .attr('y',d.cx)
 .text("message "+d.message);
 	
-	
+		$("text").animate({opacity:0},6000);
+
 	
 	setTimeout(function(){ $("text").remove();}, 7000);
 	
 	
 	
-	//$("text").animate({opacity:0},6000);
 	
 });
 			
