@@ -99,11 +99,11 @@ document.write("dataset[1].cy "+dataset[1].cy);
 	   .style("writing-mode","tb")
 	.append('svg:tspan')
      .attr("x", d.cy+25)             
-	.attr("y", d.cx+25)
+	.attr("y", d.cx)
     .text("type "+d.files.type)
 	.append('svg:tspan')
   .attr('dx', 20)
-  .attr('y',d.cx+25)
+  .attr('y',d.cx)
 .text("file "+d.files.file);
 	
 		$("text").animate({opacity:0},6000);
