@@ -92,23 +92,7 @@ document.write("dataset[1].cy "+dataset[1].cy);
                 .on("click", function(d) {
   
 //alert("type "+d.files.type+"\n"+ "file "+d.files.file);
-/*
-svg.append("text")
-	.attr("x", d.cy)             
-	.attr("y", d.cx+20)    
-	.transition()
-	 .duration(3000)
-	.style("fill", d.color)         
-    .text("type "+d.files.type);
 
-	svg.append("text")
-	.attr("x", d.cy)             
-	.attr("y", d.cx+20+20)    
-	.transition()
-	 .duration(3000)
-	.style("fill", d.color)         
-    .text("file "+d.files.file);	
-*/
 	
 	svg.append("svg:text")
 	   .style("fill", d.color)
@@ -127,7 +111,7 @@ svg.append("text")
 	
 	
 	
-$("text").animate({opacity:0},10000);
+$("text").animate({opacity:0},6000);
 
 
 });
@@ -161,48 +145,6 @@ alert("node "+d.node+"\n"
 );
 */
 
-/*
-svg.append("text")
-	.attr("x", d.cy)             
-	.attr("y", d.cx+20)    
-	.transition()
-	 .duration(3000)
-	.style("fill", d.color)         
-    .text("node "+d.node);
-
-svg.append("text")
-	.attr("x", d.cy)             
-	.attr("y", d.cx+40)    
-	.transition()
-	 .duration(3000)
-	.style("fill", d.color)         
-    .text("author "+d.author);
-	
-svg.append("text")
-	.attr("x", d.cy)             
-	.attr("y", d.cx+60)    
-	.transition()
-	 .duration(3000)
-	.style("fill", d.color)         
-    .text("timestamp "+d.timestamp);	
-	
-svg.append("text")
-	.attr("x", d.cy)             
-	.attr("y", d.cx+80)    
-	.transition()
-	 .duration(3000)
-	.style("fill", d.color)         
-    .text("branch "+d.branch);
-	
-svg.append("text")
-	.attr("x", d.cy)             
-	.attr("y", d.cx+100)    
-	.transition()
-	 .duration(3000)
-	.style("fill", d.color)         
-    .text("message "+d.message);	
-*/
-
 	svg.append("svg:text")
 	   .style("fill", d.color)
 	   .style("writing-mode","tb")
@@ -233,7 +175,7 @@ svg.append("text")
 	
 	
 	
-	$("text").animate({opacity:0},10000);
+	$("text").animate({opacity:0},6000);
 	
 });
 			
