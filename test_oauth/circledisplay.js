@@ -37,6 +37,8 @@ unit2.timestamp=obj_changesets.changesets[i].timestamp;
 unit2.branch=obj_changesets.changesets[i].branch;
 unit2.message=obj_changesets.changesets[i].message;
 
+unit2.id=obj_changesets.changesets[i].node+"_rec";
+
 dataset2[k2]=unit2;
 k2++;
 
@@ -54,6 +56,8 @@ if(obj_changesets.changesets[i].files[j].type=='removed'  )
 unit.color='green';
 
 unit.files=obj_changesets.changesets[i].files[j];
+
+unit.id=obj_changesets.changesets[i]+"_cir"
 
 dataset[k]=unit;
 k++;
@@ -95,6 +99,7 @@ document.write("dataset[1].cy "+dataset[1].cy);
 
 	
 	svg.append("svg:text")
+	    .attr("id",d.id+"_text")
 	   .style("fill", d.color)
 	   .style("writing-mode","tb")
 	.append('svg:tspan')
@@ -106,9 +111,9 @@ document.write("dataset[1].cy "+dataset[1].cy);
   .attr('y',d.cx)
 .text("file "+d.files.file);
 	
-		$("text").animate({opacity:0},6000);
+		$("#"+d.id+"_text").animate({opacity:0},6000);
 	
-	setTimeout(function(){ $("text").remove();}, 6000);
+	setTimeout(function(){ $("#"+d.id+"_text").remove();}, 6000);
 	
 	
 	
@@ -147,6 +152,7 @@ alert("node "+d.node+"\n"
 */
 
 	svg.append("svg:text")
+	   .attr("id",d.id+"_text")
 	   .style("fill", d.color)
 	   .style("writing-mode","tb")
 	.append('svg:tspan')
@@ -170,10 +176,9 @@ alert("node "+d.node+"\n"
   .attr('y',d.cx)
 .text("message "+d.message);
 	
-		$("text").animate({opacity:0},6000);
-
+		$("#"+d.id+"_text").animate({opacity:0},6000);
 	
-	setTimeout(function(){ $("text").remove();}, 6000);
+	setTimeout(function(){ $("#"+d.id+"_text").remove();}, 6000);
 	
 	
 	
