@@ -108,7 +108,7 @@ document.write("dataset[1].cy "+dataset[1].cy);
 	
 		$("text").animate({opacity:0},6000);
 	
-	setTimeout(function(){ $("text").remove();}, 7000);
+	setTimeout(function(){ $("text").remove();}, 6000);
 	
 	
 	
@@ -173,7 +173,7 @@ alert("node "+d.node+"\n"
 		$("text").animate({opacity:0},6000);
 
 	
-	setTimeout(function(){ $("text").remove();}, 7000);
+	setTimeout(function(){ $("text").remove();}, 6000);
 	
 	
 	
