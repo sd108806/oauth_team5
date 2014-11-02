@@ -103,7 +103,7 @@ document.write("dataset[1].cy "+dataset[1].cy);
     .text("type "+d.files.type)
 	.append('svg:tspan')
   .attr('dx', 20)
-  .attr('y',d.cx)
+  .attr('y',d.cx+30)
 .text("file "+d.files.file);
 	
 	
