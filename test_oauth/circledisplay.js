@@ -111,7 +111,7 @@ svg.append("text")
 */
 	
 	svg.append("svg:text")
-	   .attr("transform","rotate(90  d.cy,d.cx)")
+	   .attr("transform","rotate(90  d.cx,d.cy)")
 	.style("fill", d.color) 
 	.append('svg:tspan')
      .attr("x", d.cy)             
@@ -204,7 +204,7 @@ svg.append("text")
 */
 
 	svg.append("svg:text")
-	   .attr("transform","rotate(90  d.cy,d.cx)")
+	   .attr("transform","rotate(90  d.cx,d.cy)")
 	.style("fill", d.color) 
 	.append('svg:tspan')
      .attr("x", d.cy)             
